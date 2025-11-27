@@ -28,7 +28,6 @@ if (isset($_POST["tombol_submit"])) {
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-
 <!doctype html>
 <html lang="en">
 <!--begin::Head-->
@@ -244,10 +243,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </aside>
     <!--end::Sidebar-->
 
-    <!-- ====================================================================================== -->
-    <!--  MAIN SECTION -->
-    <!-- ====================================================================================== -->
-
     <!--begin::App Main-->
     <main class="app-main">
       <!--begin::App Content Header-->
@@ -281,7 +276,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
           <div class="row">
             <!--begin::Col-->
             <div class="col-md-6">
-              <!-- =============== ISI FORM NYA DI SINI =============== -->
               <form action="" method="post">
                 <div class="mb-3">
                   <label class="form-label">Nama Kategori</label>

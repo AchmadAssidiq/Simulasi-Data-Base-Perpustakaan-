@@ -1,12 +1,9 @@
 <?php
 
-
 require("function.php");
-
 
 $error = "";
 $success = "";
-
 
 if (isset($_POST['tombol_register'])) {
 
@@ -21,8 +18,6 @@ if (isset($_POST['tombol_register'])) {
     }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +57,6 @@ if (isset($_POST['tombol_register'])) {
 
                 <div class="login-card">
 
-
                     <h3 class="text-center mb-4">Register</h3>
 
                     <?php if ($error) : ?>
@@ -82,29 +76,21 @@ if (isset($_POST['tombol_register'])) {
 
                     <form action="" method="POST">
 
-
-                        <!-- Nama Lengkap -->
                         <div class="mb-3">
                             <label class="form-label fw-bold">Username</label>
                             <input type="text" name="username" class="form-control" placeholder="Masukkan usernama..." autocomplete="off" required>
                         </div>
 
-
-                        <!-- Email -->
                         <div class="mb-3">
                             <label class="form-label fw-bold">Email</label>
                             <input type="email" name="email" class="form-control" placeholder="Masukkan email..." autocomplete="off" required>
                         </div>
 
-
-                        <!-- Password -->
                         <div class="mb-3">
                             <label class="form-label fw-bold">Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Masukkan password..." autocomplete="off" required>
                         </div>
 
-
-                        <!-- Tombol Register -->
                         <button type="submit" name="tombol_register" class="btn btn-primary w-100">Register</button>
                         <p class="mt-2">Sudah punnya akun? <a href="login.php">Login</a></p>
                     </form>
@@ -116,7 +102,6 @@ if (isset($_POST['tombol_register'])) {
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -10,12 +10,8 @@ $username = $_SESSION['username'];
 
 $jumlahDataPerHalaman = 5;
 
-
-// ambil keyword pencarian
 $keyword = isset($_GET["keyword"]) ? $_GET["keyword"] : "";
 
-
-// hitung jumlah data
 if ($keyword != "") {
   $queryHitung = "
         SELECT * FROM kategori 
@@ -52,8 +48,6 @@ if ($keyword != "") {
         LIMIT $awalData, $jumlahDataPerHalaman
     ");
 }
-
-
 $current_page = basename($_SERVER['PHP_SELF']);
 
 ?>
@@ -273,7 +267,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <!--end::Sidebar-->
 
     <!--begin::App Main-->
-    <!--begin::App Main-->
     <main class="app-main">
 
       <!--begin::App Content Header-->
@@ -329,7 +322,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     type="text"
                     class="form-control"
                     name="keyword"
-                    placeholder="Cari kategori...">
+                    placeholder="search kategori...">
                   <button class="btn btn-primary" type="submit">
                     <i class="bi bi-search"></i>
                   </button>
@@ -362,7 +355,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
           <div class="row">
             <!--begin::Col-->
             <div class="col">
-              <!-- =============== ISI TABEL ADA DI SINI =============== -->
               <table class="table table-striped table-hover">
                 <tr>
                   <th>No.</th>

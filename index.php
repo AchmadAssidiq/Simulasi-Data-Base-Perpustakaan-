@@ -275,10 +275,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </aside>
     <!--end::Sidebar-->
 
-    <!-- ====================================================================================== -->
-    <!--  MAIN SECTION -->
-    <!-- ====================================================================================== -->
-
     <!--begin::App Main-->
     <main class="app-main">
       <!--begin::App Content Header-->
@@ -366,7 +362,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
           <div class="row">
             <!--begin::Col-->
             <div class="col">
-              <!-- =============== ISI TABEL ADA DI SINI =============== -->
               <table class="table table-striped table-hover">
                 <tr>
                   <th>No.</th>

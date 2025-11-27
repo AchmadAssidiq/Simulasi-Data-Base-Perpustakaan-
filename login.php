@@ -87,22 +87,16 @@ if (isset($_POST['tombol_login'])) {
 
                     <form action="" method="POST">
 
-
-                        <!-- Nama Lengkap -->
                         <div class="mb-3">
                             <label class="form-label fw-bold">Username</label>
                             <input type="text" name="username" class="form-control" placeholder="Masukkan usernama..." autocomplete="off" required>
                         </div>
 
-
-                        <!-- Password -->
                         <div class="mb-3">
                             <label class="form-label fw-bold">Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Masukkan password..." autocomplete="off" required>
                         </div>
 
-
-                        <!-- Tombol Register -->
                         <button type="submit" name="tombol_login" class="btn btn-primary w-100">Login</button>
                         <p class="mt-2">Sudah punya akun? <a href="register.php">Register</a></p>
                     </form>
@@ -114,7 +108,6 @@ if (isset($_POST['tombol_login'])) {
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -42,9 +42,6 @@ if (isset($_POST['tombol_submit'])) {
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +53,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </head>
 
 <body>
-
 
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

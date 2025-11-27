@@ -8,7 +8,6 @@ if (!isset($_SESSION["login"])) {
 require("function.php");
 $username = $_SESSION['username'];
 
-// CEK id_buku TERLEBIH DAHULU
 if (!isset($_GET['id_buku']) || !is_numeric($_GET['id_buku'])) {
   echo "<script>
             alert('ID buku tidak valid!');
@@ -19,7 +18,6 @@ if (!isset($_GET['id_buku']) || !is_numeric($_GET['id_buku'])) {
 
 $id_buku = (int)$_GET['id_buku'];
 
-// QUERY DATA BUKU
 $query = query("SELECT * FROM buku WHERE id_buku = $id_buku");
 
 if (isset($query[0])) {
@@ -32,10 +30,8 @@ if (isset($query[0])) {
   exit;
 }
 
-// QUERY DATA KATEGORI (WAJIB ADA)
 $kategori_query = mysqli_query($conn, "SELECT * FROM kategori");
 
-// PROSES UPDATE
 if (isset($_POST['tombol_submit'])) {
 
   if (ubah_data($_POST) > 0) {
@@ -65,7 +61,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </head>
 
 <body>
-
 
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

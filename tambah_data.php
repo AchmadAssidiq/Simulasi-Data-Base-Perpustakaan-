@@ -246,10 +246,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </aside>
     <!--end::Sidebar-->
 
-    <!-- ====================================================================================== -->
-    <!--  MAIN SECTION -->
-    <!-- ====================================================================================== -->
-
     <!--begin::App Main-->
     <main class="app-main">
       <!--begin::App Content Header-->
@@ -292,7 +288,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                   <label class="form-label">Kategori Buku</label>
                   <select name="id_kategori" class="form-select" required>
                     <option value="">-- Pilih Kategori --</option>
-
                     <?php while ($row = mysqli_fetch_assoc($kategori_query)): ?>
                       <option value="<?= $row['id_kategori']; ?>">
                         <?= htmlspecialchars($row['kategori']); ?>
