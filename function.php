@@ -185,23 +185,29 @@ function register($data_register)
 {
     global $conn;
 
-    $username = strtolower($data_register['username']);
-    $email = $data_register['email'];
+    $username = strtolower(trim($data_register['username']));
+    $email = strtolower(trim($data_register['email']));
     $password = mysqli_real_escape_string($conn, $data_register['password']);
-
-    $query = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
-
-    $result = mysqli_fetch_assoc($query);
 
     if (strlen($password) < 8) {
         return "Password harus mengandung minimal 8 karakter";
     }
 
-    if ($result != NULL) {
-        return "Username sudah terdaftar di database!";
+    $cekUsername = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+    if (mysqli_fetch_assoc($cekUsername)) {
+        return "Username sudah terdaftar!";
+    }
+
+    $cekEmail = mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'");
+    if (mysqli_fetch_assoc($cekEmail)) {
+        return "email sudah terdaftar";
     }
 
     $password = password_hash($password, PASSWORD_DEFAULT);
-    mysqli_query($conn, "INSERT INTO user (id, username, email, password) VALUES('', '$username', '$email', '$password')");
+
+
+    mysqli_query($conn, "INSERT INTO user (username, email, password) 
+                         VALUES ('$username', '$email', '$password')");
+
     return true;
 }
