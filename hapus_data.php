@@ -1,0 +1,21 @@
+<?php
+
+require("function.php");
+
+$id_buku = $_GET['id_buku'];
+
+if (hapus_data($id_buku) > 0) {
+    echo "
+        <script>
+            alert('Data berhasil dihapus!');
+            document.location.href = 'index.php';
+        </script>
+    ";
+} else {
+    echo "
+        <script>
+            alert('Data gagal dihapus!');
+            document.location.href = 'index.php';
+        </script>
+    ";
+}
